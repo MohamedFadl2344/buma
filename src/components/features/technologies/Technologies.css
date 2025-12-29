@@ -1,0 +1,150 @@
+/* Technologies/Partners Section */
+.technologies-section {
+    padding: var(--spacing-xl) 0;
+    background: var(--bg-primary);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.technologies-section.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.partners-header {
+    margin-bottom: var(--spacing-lg);
+}
+
+.section-subtitle,
+.partners-subtitle {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Tech Grid - Single Row */
+.tech-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    flex-wrap: nowrap;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0.5rem 1rem;
+}
+
+/* Hide scrollbar but keep functionality */
+.tech-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.tech-grid {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: none;
+    transition: all var(--transition-normal);
+    cursor: pointer;
+    opacity: 0.85;
+    flex-shrink: 0;
+    min-width: fit-content;
+}
+
+.tech-item:hover {
+    opacity: 1;
+    transform: translateY(-3px);
+}
+
+.tech-icon {
+    color: var(--text-secondary);
+    transition: color var(--transition-fast);
+    display: flex;
+    align-items: center;
+}
+
+.tech-item:hover .tech-icon {
+    color: var(--text-primary);
+}
+
+.tech-name {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.tech-item:hover .tech-name {
+    color: var(--text-primary);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .tech-grid {
+        gap: clamp(1rem, 3vw, 2rem);
+    }
+
+    .tech-item {
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .technologies-section {
+        padding: var(--spacing-lg) 0;
+    }
+
+    .tech-grid {
+        gap: 1.5rem;
+        justify-content: flex-start;
+        padding: 0.5rem;
+    }
+
+    .tech-item {
+        padding: 0.4rem 0.6rem;
+    }
+
+    .tech-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .tech-name {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .tech-grid {
+        gap: 1rem;
+    }
+
+    .tech-item {
+        gap: 0.3rem;
+    }
+
+    .tech-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .tech-name {
+        font-size: 0.65rem;
+    }
+}
