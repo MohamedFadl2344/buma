@@ -13,18 +13,29 @@ const MobileSidebar = ({ isOpen, onClose, children }: MobileSidebarProps) => {
             <div
                 className={`mobile-overlay ${isOpen ? 'active' : ''}`}
                 onClick={onClose}
+                aria-hidden={!isOpen}
             />
 
             {/* Sidebar */}
-            <div className={`mobile-sidebar ${isOpen ? 'active' : ''}`}>
+            <div
+                className={`mobile-sidebar ${isOpen ? 'active' : ''}`}
+                id="mobile-sidebar"
+                role="dialog"
+                aria-label="Mobile navigation menu"
+                aria-hidden={!isOpen}
+            >
                 <div className="mobile-sidebar-header">
                     <div className="mobile-brand">
-                        <div className="brand-icon">
+                        <div className="brand-icon" aria-hidden="true">
                             <FaBriefcase />
                         </div>
                         <span className="brand-name">التزام للإدارة</span>
                     </div>
-                    <button className="mobile-close-btn" onClick={onClose}>
+                    <button
+                        className="mobile-close-btn"
+                        onClick={onClose}
+                        aria-label="Close mobile menu"
+                    >
                         <FaTimes />
                     </button>
                 </div>

@@ -29,12 +29,15 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className={`navbar-custom ${isScrolled ? 'scrolled' : ''}`}>
+            <a href="#main-content" className="skip-link">
+                Skip to main content
+            </a>
+            <nav className={`navbar-custom ${isScrolled ? 'scrolled' : ''}`} role="navigation" aria-label="Main navigation">
                 <div className="container">
                     <div className="navbar-content">
                         {/* Logo */}
-                        <Link to="/" className="navbar-brand">
-                            <div className="brand-icon">
+                        <Link to="/" className="navbar-brand" aria-label="التزام للإدارة - الصفحة الرئيسية">
+                            <div className="brand-icon" aria-hidden="true">
                                 <FaBriefcase />
                             </div>
                             <span className="brand-name">التزام للإدارة</span>
@@ -74,5 +77,13 @@ const Navbar = () => {
         </>
     );
 };
+
+
+
+
+
+
+
+
 
 export default Navbar;

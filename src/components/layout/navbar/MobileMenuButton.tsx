@@ -11,7 +11,9 @@ const MobileMenuButton = ({ isOpen, onClick, className = '' }: MobileMenuButtonP
         <button
             className={`mobile-menu-btn d-lg-none ${className}`}
             onClick={onClick}
-            aria-label="Toggle menu"
+            aria-label={isOpen ? "Close mobile menu" : "Open mobile menu"}
+            aria-expanded={isOpen}
+            aria-controls="mobile-sidebar"
         >
             {isOpen ? <FaTimes /> : <FaBars />}
         </button>

@@ -4,8 +4,6 @@
 
 ![Eltizam Platform](./doc/screenshot-التزام%20للإدارة%20-%20حلول%20إدارية%20واستشارات%20مالية%20احترافية.png)
 
----
-
 ## Features
 
 - **Fully Responsive Design** - Optimized for all devices and screen sizes
@@ -17,8 +15,6 @@
 - **Routing System** - Client-side navigation with React Router
 - **Policy Pages** - Privacy policy, terms of service, and user terms
 
----
-
 ## Tech Stack
 
 | Technology | Version | Purpose |
@@ -29,8 +25,6 @@
 | React Router DOM | 7.11.0 | Client-side routing |
 | React Icons | 5.4.0 | Icon library (Font Awesome) |
 | Vite | 6.0.11 | Fast build tool and dev server |
-
----
 
 ## Project Architecture
 
@@ -102,8 +96,6 @@ graph TD
 - Strict type checking for props and state
 - Better IDE support and error detection
 
----
-
 ## Getting Started
 
 ### Prerequisites
@@ -134,8 +126,6 @@ npm run build
 # Preview production build
 npm run preview
 ```
-
----
 
 ## Project Structure
 
@@ -193,8 +183,6 @@ buma/
 └── vite.config.ts
 ```
 
----
-
 ## Key Pages
 
 | Page | Route | Description |
@@ -204,8 +192,6 @@ buma/
 | **Terms of Service** | `/terms-conditions` | Service terms and conditions |
 | **User Terms** | `/terms` | User agreement and regulations |
 | **404 Error** | `*` | Custom error page for invalid routes |
-
----
 
 ## Features Breakdown
 
@@ -234,8 +220,6 @@ buma/
 - Brand consistency maintained
 - Clear navigation back to home
 
----
-
 ## Design System
 
 ### Color Palette
@@ -255,8 +239,6 @@ buma/
 - Consistent spacing system
 - Grid-based layouts
 - Smooth transitions and animations
-
----
 
 ## SEO Optimization
 
@@ -279,8 +261,6 @@ buma/
 - Keyboard navigation support
 - RTL language support
 
----
-
 ## Browser Support
 
 - Chrome (latest)
@@ -289,18 +269,12 @@ buma/
 - Edge (latest)
 - Mobile browsers (iOS Safari, Chrome Mobile)
 
----
-
 ## Author
 
 **Mohamed Fadl**
 
----
-
 ## License
 
 All rights reserved - Eltizam Business Management Platform
-
----
 
 *Built with React and TypeScript for professional business management solutions*

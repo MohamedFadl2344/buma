@@ -6,7 +6,7 @@ const CTA = () => {
     const ctaRef = useScrollAnimation({ threshold: 0.2 });
 
     return (
-        <section className="cta-section" ref={ctaRef}>
+        <section className="cta-section" ref={ctaRef} id="contact">
             <div className="container">
                 <div className="cta-content">
                     <h2 className="cta-title">جاهز لنقل أعمالك إلى المستوى التالي؟</h2>
@@ -19,14 +19,15 @@ const CTA = () => {
                             type="email"
                             className="cta-input"
                             placeholder="بريدك الإلكتروني"
+                            aria-label="أدخل بريدك الإلكتروني"
                         />
-                        <button className="cta-button">
+                        <button className="cta-button" aria-label="تواصل معنا الآن">
                             تواصل معنا
                         </button>
                     </div>
 
                     <p className="cta-note">
-                        <FaLock className="lock-icon" />
+                        <FaLock className="lock-icon" aria-hidden="true" />
                         لن نشارك بياناتك مع أي جهات خارجية أبداً
                     </p>
                 </div>

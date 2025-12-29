@@ -20,10 +20,10 @@ const HeroContent = ({ title, subtitle, description }: HeroContentProps) => {
             <p className="hero-description">{description}</p>
 
             <div className="hero-buttons">
-                <a href="#contact" className="btn btn-primary-custom btn-lg">
+                <a href="#contact" className="btn btn-primary-custom btn-lg" aria-label="تواصل معنا الآن">
                     تواصل معنا
                 </a>
-                <a href="#about" className="btn btn-outline-custom btn-lg">
+                <a href="#about" className="btn btn-outline-custom btn-lg" aria-label="اعرف المزيد عن خدماتنا">
                     اعرف المزيد
                 </a>
             </div>
