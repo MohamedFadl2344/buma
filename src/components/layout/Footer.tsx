@@ -44,7 +44,7 @@ const Footer = () => {
                         </div>
                         <div className="col-md-6 text-center text-md-start">
                             <p className="footer-made">
-                                صنع بـ ❤️ في المملكة العربية السعودية
+                                Made with ❤️ by Mohamed Fadl
                             </p>
                         </div>
                     </div>
