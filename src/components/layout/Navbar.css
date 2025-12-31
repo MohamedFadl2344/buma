@@ -138,13 +138,16 @@
     position: fixed;
     top: 0;
     right: -100%;
-    width: 280px;
+    width: 300px;
     height: 100vh;
     background: var(--bg-secondary);
-    border-left: 1px solid var(--border-primary);
-    transition: right var(--transition-normal);
-    z-index: 2000;
+    box-shadow: var(--shadow-lg);
+    transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1001;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transform: translateZ(0);
+    will-change: right;
 }
 
 .mobile-sidebar.active {
@@ -196,22 +199,66 @@
     padding: var(--spacing-lg);
 }
 
+/* Mobile Navigation Links */
+.mobile-nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.mobile-nav-links li {
+    width: 100%;
+}
+
+.mobile-nav-links a {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.2s ease-out;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: right;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    will-change: background-color, padding-right;
+}
+
+.mobile-nav-links a:active {
+    background: rgba(227, 30, 36, 0.15);
+    transform: scale(0.98);
+}
+
+.mobile-nav-links a:hover,
+.mobile-nav-links a:focus {
+    background: rgba(227, 30, 36, 0.1);
+    color: var(--primary-red);
+    padding-right: 2rem;
+}
+
 .mobile-overlay {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: transparent;
+    z-index: 1000;
     opacity: 0;
     visibility: hidden;
-    transition: all var(--transition-normal);
-    z-index: 1999;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    pointer-events: none;
 }
 
 .mobile-overlay.active {
-    opacity: 1;
-    visibility: visible;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: auto;
 }
 
 /* Mobile Navigation Links */
